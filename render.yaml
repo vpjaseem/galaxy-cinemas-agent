@@ -1,12 +1,8 @@
-# render.yaml — Render.com deployment config
-# This file tells Render how to deploy your server
-# Place this in the root of your project
-
 services:
   - type: web
     name: galaxy-cinemas-agent
     runtime: node
-    buildCommand: npm install && npx playwright install chromium --with-deps
+    buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: PORT
